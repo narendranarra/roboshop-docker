@@ -6,9 +6,9 @@ ENV MONGO_URL="mongodb://mongodb:27017/users"
 COPY package.json .
 COPY *.js .
 RUN npm install
-RUN yum update -y
-RUN yum install git -y
-RUN yum install nmap -y    
+RUN sudo yum update -y
+RUN sudo yum install git -y
+RUN sudo  yum install nmap -y    
 CMD ["node", "server.js"]  
 
 
